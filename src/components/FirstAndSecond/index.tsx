@@ -18,13 +18,14 @@ import {
   RoleTitle
 } from './styles'
 import { FaClipboardList, FaGithub, FaLinkedin } from 'react-icons/fa'
+import Circles from '../Circles'
 
 const FirstAndSecond: React.FC = () => {
   const { scrollYProgress } = useScroll()
 
   const frameOpacity = useTransform(scrollYProgress, [0.19, 0.25], [0, 1])
 
-  const frameScale = useTransform(scrollYProgress, [0.35, 0.37], [0.5, 0.8])
+  const frameScale = useTransform(scrollYProgress, [0.55, 0.57], [0.5, 0.8])
 
   return (
     <Sticky className="second">
@@ -50,14 +51,19 @@ const FirstAndSecond: React.FC = () => {
 const First: React.FC = () => {
   const { scrollYProgress } = useScroll()
 
-  const firstScale = useTransform(scrollYProgress,
-    [0.2, 0.22, 0.35, 0.37],
+  const containerScale = useTransform(scrollYProgress,
+    [0.2, 0.22, 0.55, 0.57],
     [1, 0.5, 0.5, 1]
   )
 
-  const firstRadius = useTransform(scrollYProgress,
-    [0.2, 0.22, 0.35, 0.37],
+  const containerRadius = useTransform(scrollYProgress,
+    [0.2, 0.22, 0.55, 0.57],
     [0, 10, 10, 0]
+  )
+
+  const firstSectionOffsetY = useTransform(scrollYProgress,
+    [0.25, 0.3, 0.33, 0.37],
+    ['0%', "-100%", "-100%", "-200%"]
   )
 
   const leftSideHeight = useTransform(scrollYProgress,
@@ -65,14 +71,19 @@ const First: React.FC = () => {
     ['20vh', '100vh']
   )
 
-  const rightSideY = useTransform(scrollYProgress,
-    [0.020, 0.060],
-    ['58vh', '0vh']
+  const firstRoleDescriptionY = useTransform(scrollYProgress,
+    [0.020, 0.060, 0.12, 0.14],
+    ['5vh', '40vh', '40vh', '30vh']
   )
 
-  const leftSideY = useTransform(scrollYProgress,
-    [0.020, 0.060],
-    ['5vh', '40vh']
+  const secondRoleDescriptionY = useTransform(scrollYProgress,
+    [0.12, 0.14],
+    ['60vh', '40vh']
+  )
+
+  const secondRoleDescriptionOpacity = useTransform(scrollYProgress,
+    [0.12, 0.135],
+    [0, 1]
   )
 
   const introTitleY = useTransform(scrollYProgress,
@@ -85,26 +96,27 @@ const First: React.FC = () => {
     [0, 1]
   )
 
+  const rightSideY = useTransform(scrollYProgress,
+    [0.020, 0.060],
+    ['58vh', '0vh']
+  )
+
   const rightSideScale = useTransform(scrollYProgress,
     [0.030, 0.070],
     [0, 0.551]
   )
 
-  const offsetY = useTransform(scrollYProgress,
-    [0.25, 0.30],
-    ['0%', "-100%"]
-  )
-
   return (
     <Container
       style={{
-        scale: firstScale,
-        borderRadius: firstRadius
+        scale: containerScale,
+        borderRadius: containerRadius
       }}
     >
       <FirstSection style={{
-        y: offsetY
+        y: firstSectionOffsetY
       }}>
+        <Circles />
         <IntroInfo>
           <LeftSide
             className="left-side"
@@ -113,11 +125,20 @@ const First: React.FC = () => {
             }}
           >
             <RoleTitle>Software Developer</RoleTitle>
-            <RoleDescription style={{ y: leftSideY }}>
+            <RoleDescription style={{ y: firstRoleDescriptionY }}>
               I’m a Software Developer based in Santarém with 2 years
               of experience working complex React (Web) and React Native
               (Mobile) solutions for varied type of consumers and business.
               Currently I’m seeking a position as a Junior Front-end Developer.
+            </RoleDescription>
+            <RoleDescription
+              style={{
+                y: secondRoleDescriptionY,
+                opacity: secondRoleDescriptionOpacity
+              }}
+            >
+              Never running from bigger problems, always thinking that
+              great skills come from solving once 'unsolvable' problems.
             </RoleDescription>
           </LeftSide>
           <RightSide>
@@ -150,6 +171,7 @@ const First: React.FC = () => {
             />
           </RightSide>
         </IntroInfo>
+        <div className="b"></div>
         <div className="c"></div>
       </FirstSection>
     </Container>

@@ -17,14 +17,14 @@ function App() {
 
       <Header />
 
-      <Main style={{ height: '1000vh' }}>
+      <Main style={{ height: '500vh' }}>
         <h1 id="Sobre"></h1>
-        <Section style={{ height: '72.7%' }}>
+        <Section style={{ height: '75%' }}>
           <FirstAndSecond />
         </Section>
 
         <h1 id="Contato"></h1>
-        <Section style={{ height: '27.3%' }}>
+        <Section style={{ height: '25%' }}>
           <Sticky className="third" />
         </Section>
       </Main>

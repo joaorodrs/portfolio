@@ -15,6 +15,12 @@ export const FirstSection = styled(motion.div)`
   width: 100%;
   height: 100%;
   
+  .b {
+    background: var(--colors-secondary);
+    width: 100%;
+    height: 100%;
+  }
+
   .c {
     background: #0a7397;
     width: 100%;
@@ -34,6 +40,7 @@ export const LeftSide = styled(motion.div)`
   height: 100%;
   background: var(--colors-primary);
   padding: 2rem;
+  z-index: 2;
 `
 
 export const RightSide = styled(motion.div)`
