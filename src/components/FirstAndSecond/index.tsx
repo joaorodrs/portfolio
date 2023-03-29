@@ -171,7 +171,7 @@ const First: React.FC = () => {
                   <FaLinkedin />
                   <span>LinkedIn</span>
                 </LinkButton>
-                <LinkButton href="https://github.com/joaorodrs" target="_blank">
+                <LinkButton href="/curriculo.pdf" target="_blank">
                   <FaClipboardList />
                   <span>Resume</span>
                 </LinkButton>
