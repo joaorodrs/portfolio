@@ -18,7 +18,7 @@ import {
   RoleTitle
 } from './styles'
 import { FaClipboardList, FaGithub, FaLinkedin } from 'react-icons/fa'
-import Circles from '../Circles'
+import Circles from '../Polygons'
 
 const FirstAndSecond: React.FC = () => {
   const { scrollYProgress } = useScroll()

@@ -19,6 +19,6 @@ export const Container = styled(motion.div)`
 export const Circle = styled(motion.div)`
   border: 1px solid;
   border-color: var(--colors-secondary);
-  margin: 10px 20px;
+  margin: 10px 20px;  
   transform: rotateZ(45deg)
 `

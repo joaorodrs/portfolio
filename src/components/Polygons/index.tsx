@@ -20,31 +20,24 @@ function Circles() {
   )
 
   return (
-      <Container style={{ y: '20vh' }}>
+      <Container layout style={{ y: '20vh' }}>
         {Array.from(Array(30)).map(() => {
             const randomSize = generateRandom(20, 245)
 
             return (
               <Circle
                 animate={{
-                  // borderWidth: [
-                  //   generateRandom(1, 10),
-                  //   generateRandom(1, 10),
-                  //   generateRandom(1, 10),
-                  //   generateRandom(1, 10),
-                  //   generateRandom(1, 10),
-                  // ],
-                  transition: {
-                    repeat: Infinity,
-                    repeatType: 'reverse',
-                    duration: 2.5,
-                    ease: 'easeInOut'
-                  }
+                  width: [
+                    randomSize * 0.9,
+                    randomSize,
+                  ],
+                  height: [
+                    randomSize * 0.9,
+                    randomSize,
+                  ],
                 }}
                 style={{
-                  width: randomSize,
-                  height: randomSize,
-                  borderWidth
+                  borderWidth,
                 }}
               />
             )
