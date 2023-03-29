@@ -15,16 +15,20 @@ export const FirstSection = styled(motion.div)`
   width: 100%;
   height: 100%;
   
-  .b {
-    background: var(--colors-secondary);
+  .reactChatSection {
+    background: black;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .c {
-    background: #0a7397;
+  .gameStoreSection {
+    background: black;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
   }
 `
 
@@ -98,4 +102,24 @@ export const LinkButton = styled(motion.a)`
   svg {
     margin-right: 0.5rem;
   }
+`
+
+export const QuoteContainer = styled(motion.div)`
+  background: var(--colors-primary);
+  width: 100%;
+  height: 100%;
+`
+
+export const QuoteText = styled(motion.h2)`
+  margin: auto;
+  font-family: sans-serif;
+  font-style: italic;
+  color: white;
+  width: 50%;
+`
+
+export const QuoteAuthor = styled(motion.p)`
+  margin: auto;
+  color: white;
+  width: 50%;
 `

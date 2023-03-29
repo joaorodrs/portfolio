@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion, useTransform, useScroll } from 'framer-motion'
 import profilePic from '../../assets/joao.jpeg'
+import reactchatPic from '../../assets/reactchat.png'
+import gameStorePic from '../../assets/game-store.png'
 
 import { Sticky } from '../../styles'
 import {
@@ -13,6 +15,9 @@ import {
   IntroTitle,
   LeftSide,
   LinkButton,
+  QuoteAuthor,
+  QuoteContainer,
+  QuoteText,
   RightSide,
   RoleDescription,
   RoleTitle
@@ -62,8 +67,8 @@ const First: React.FC = () => {
   )
 
   const firstSectionOffsetY = useTransform(scrollYProgress,
-    [0.25, 0.3, 0.33, 0.37],
-    ['0%', "-100%", "-100%", "-200%"]
+    [0.25, 0.3, 0.40, 0.45, 0.50, 0.55],
+    ['0%', "-100%", "-100%", "-200%", "-200%", "-300%"]
   )
 
   const leftSideHeight = useTransform(scrollYProgress,
@@ -106,6 +111,16 @@ const First: React.FC = () => {
     [0, 0.551]
   )
 
+  const quoteOffsetY = useTransform(scrollYProgress,
+    [0.60, 0.65],
+    ['-10vh', '45vh']
+  )
+
+  const quoteOpacity = useTransform(scrollYProgress,
+    [0.60, 0.65],
+    [0, 1]
+  )
+
   return (
     <Container
       style={{
@@ -128,7 +143,7 @@ const First: React.FC = () => {
             <RoleDescription style={{ y: firstRoleDescriptionY }}>
               I’m a Software Developer based in Santarém with 2 years
               of experience working complex React (Web) and React Native
-              (Mobile) solutions for varied type of consumers and business.
+              (Mobile) solutions for varied types of consumers and business.
               Currently I’m seeking a position as a Junior Front-end Developer.
             </RoleDescription>
             <RoleDescription
@@ -145,13 +160,13 @@ const First: React.FC = () => {
             <IntroContainer layout style={{ y: introTitleY }}>
               <IntroTitle>My Website.</IntroTitle>
               <IntroDescription>
-                Hey! I'm João Paulo Rodrigues, but you can call me lil John.
+                Hey! I'm João Paulo Rodrigues, but you can call me lil' John.
               </IntroDescription>
               <ButtonStack style={{ opacity: introLinksOpacity }}>
                 <LinkButton href="https://github.com/joaorodrs" target="_blank">
                   <FaGithub />
                   <span>Github</span>
-                </LinkButton>
+                </LinkButton>''
                 <LinkButton href="https://linkedin.com/in/joaorodrs" target="_blank">
                   <FaLinkedin />
                   <span>LinkedIn</span>
@@ -171,8 +186,19 @@ const First: React.FC = () => {
             />
           </RightSide>
         </IntroInfo>
-        <div className="b"></div>
-        <div className="c"></div>
+        <div className="reactChatSection">
+          <img src={reactchatPic} height="100%" />
+        </div>
+        <div className="gameStoreSection">
+          <img src={gameStorePic} height="100%" />
+        </div>
+        <QuoteContainer>
+          <QuoteText  style={{ y: quoteOffsetY, opacity: quoteOpacity }}>
+            "Freedom is not about doing what you want to do,
+            rather it's about doing what you don't want to do."
+          </QuoteText>
+          <QuoteAuthor style={{ y: quoteOffsetY, opacity: quoteOpacity }}>- Immanuel Kant</QuoteAuthor>
+        </QuoteContainer>
       </FirstSection>
     </Container>
   )

@@ -18,9 +18,14 @@ function Circles() {
     [0, 0.05],
     [1, 20]
   )
+  
+  const opacity = useTransform(scrollYProgress,
+    [0.1, 0.15],
+    [1, 0]
+  )
 
   return (
-      <Container layout style={{ y: '20vh' }}>
+      <Container layout style={{ y: '20vh', opacity }}>
         {Array.from(Array(30)).map(() => {
             const randomSize = generateRandom(20, 245)
 
