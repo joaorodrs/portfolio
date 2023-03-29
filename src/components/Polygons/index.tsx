@@ -11,7 +11,7 @@ function generateRandom(min = 0, max = 1000) {
   return rand;
 }
 
-function Circles() {
+function Polygons() {
   const { scrollYProgress } = useScroll()
 
   const borderWidth = useTransform(scrollYProgress,
@@ -31,6 +31,7 @@ function Circles() {
 
             return (
               <Circle
+                key={String(Math.random())}
                 animate={{
                   width: [
                     randomSize * 0.9,
@@ -52,4 +53,4 @@ function Circles() {
   )
 }
 
-export default Circles
+export default Polygons

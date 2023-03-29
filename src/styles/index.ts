@@ -32,15 +32,24 @@ export const ContactMeTitle = styled(motion.h1)`
 `
 
 export const ContactContainer = styled.div`
-  background: red;
   margin-top: 40vh;
   height: 50%;
+  display: flex;
+  justify-content: space-around;
 `
 
 export const MapContainer = styled.div`
-  background: green;
+  width: fit-content;
 `
 
 export const SocialMediaContainer = styled.div`
-  background: blue;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  > a {
+    margin: 15px 0;
+  }
 `

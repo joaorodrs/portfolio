@@ -166,7 +166,7 @@ const First: React.FC = () => {
                 <LinkButton href="https://github.com/joaorodrs" target="_blank">
                   <FaGithub />
                   <span>Github</span>
-                </LinkButton>''
+                </LinkButton>
                 <LinkButton href="https://linkedin.com/in/joaorodrs" target="_blank">
                   <FaLinkedin />
                   <span>LinkedIn</span>

@@ -12,8 +12,8 @@ const Header: React.FC = () => {
   return (
     <Container style={{ y: headerY }}>
       <nav>
-        <NavItem href="#Sobre">Sobre</NavItem>
-        <NavItem href="#Contato">Contato</NavItem>
+        <NavItem href="#about">About</NavItem>
+        <NavItem href="#contact">Contact</NavItem>
       </nav>
     </Container>
   );
