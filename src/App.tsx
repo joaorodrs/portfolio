@@ -7,7 +7,7 @@ import GlobalStyle from './styles/global'
 import Header from './components/Header'
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api'
 import { LinkButton } from './components/FirstAndSecond/styles'
-import { FaCheck, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaCheck, FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { MdContentCopy } from 'react-icons/md'
 
 const containerStyle = {
@@ -96,6 +96,10 @@ function App() {
                 <LinkButton href="https://instagram.com/joaorodrs" target="_blank">
                   <FaInstagram />
                   Instagram
+                </LinkButton>
+                <LinkButton href="https://wa.me/5593991384250" target="_blank">
+                  <FaWhatsapp />
+                  +55 93 99138-4250
                 </LinkButton>
                 <LinkButton
                   href="javascript:void(0)"

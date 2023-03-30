@@ -50,6 +50,6 @@ export const SocialMediaContainer = styled.div`
   justify-content: center;
 
   > a {
-    margin: 15px 0;
+    margin: 10px 0;
   }
 `
