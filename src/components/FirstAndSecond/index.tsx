@@ -144,7 +144,7 @@ const First: React.FC = () => {
               I’m a Software Developer based in Santarém with 2 years
               of experience working complex React (Web) and React Native
               (Mobile) solutions for varied types of consumers and business.
-              Currently I’m seeking a position as a Junior Front-end Developer.
+              Currently I’m working as a Junior Front-end Developer.
             </RoleDescription>
             <RoleDescription
               style={{
